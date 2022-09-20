@@ -9,6 +9,9 @@ class Player
 
   def decrease_life_count
     @current_life_count -= 1
-    puts "Player #{id} life count = #{current_life_count} "
+  end
+
+  def alive?
+    @current_life_count > 0 ? true : false
   end
 end

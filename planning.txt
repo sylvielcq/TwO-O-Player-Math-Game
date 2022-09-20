@@ -16,7 +16,7 @@ Game #=> holds the game logic
   - current_player = 1
   Methods:
   - get current_player
-  - switch current_player
+  - switch player
   
   def game_loop
   - create a new question object
