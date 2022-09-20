@@ -1,7 +1,6 @@
 ### TWO-O-PLAYER MATH GAME - PLANNING ###
 
-=begin
-# Classes
+CLASSES
 
 Player #=> Defines the behavior of players
   Initialize:
@@ -46,7 +45,7 @@ Question #=> everything related to math questions
   - check answer (=> bool)
 
 
-# Objects
+OBJECTS
 
 Player1
   - id = 1
@@ -54,6 +53,6 @@ Player1
 Player2
   - id = 2
 
-Questions
-
-=end
+Question
+Question
+...
