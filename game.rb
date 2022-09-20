@@ -8,11 +8,7 @@ class Game
   end
 
   def switch_player
-    if @current_player == @player1
-      @current_player = @player2
-    else
-      @current_player = @player1
-    end
+    @current_player == @player1 ? @current_player = @player2 : @current_player = @player1
   end
 
   def winner
@@ -30,20 +26,21 @@ class Game
     print "> "
     input = $stdin.gets.chomp.to_i
 
-    if question.check_answer(input) == true
+    if question.check_answer(input)
       puts "Player #{@current_player.id}: YES! You are correct."
     else
-      puts 'Seriously? No!'
+      puts "Player #{@current_player.id}: Seriously? No!"
       @current_player.decrease_life_count
     end
 
+    puts "P1: #{@player1.current_life_count}/3 vs P2: #{@player2.current_life_count}/3"
+
     if @player1.alive? && @player2.alive?
-      puts "P1: #{@player1.current_life_count}/3 vs P2: #{@player2.current_life_count}/3"
       puts "----- NEW TURN -----"
       self.switch_player
       self.start
     else
-      puts "Player #{self.winner.id} wins with a score of #{self.winner.current_life_count}"
+      puts "Player #{self.winner.id} wins with a score of #{self.winner.current_life_count}/3"
       puts "----- GAME OVER -----"
       puts ("Good bye!")
     end
