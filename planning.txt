@@ -8,6 +8,7 @@ Player #=> Defines the behavior of players
   - current_life_count = 3
   Methods:
   - get/set current_life_count
+  - get player_id
   - decrease_life_count
  
 Game #=> holds the game logic
@@ -40,7 +41,7 @@ Game #=> holds the game logic
 Question #=> everything related to math questions
   Methods:
   - generate random number between 1 and 20
-  - create math addition question using current_player and 2 random generated numbers
+  - create math addition question using 2 random generated numbers
   - calculate answer
   - check answer (=> bool)
 

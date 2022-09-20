@@ -9,6 +9,6 @@ class Player
 
   def decrease_life_count
     @current_life_count -= 1
-    puts "Player #{id} current life count = #{current_life_count} "
+    puts "Player #{id} life count = #{current_life_count} "
   end
 end
